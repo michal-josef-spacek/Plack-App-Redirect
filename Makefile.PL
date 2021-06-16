@@ -19,6 +19,7 @@ perl_version 5.008;
 readme_from 'Redirect.pm';
 recursive_author_tests('xt');
 requires 'Plack::Response' => 0;
+requires 'Plack::Request' => 0;
 requires 'Plack::Util::Accessor' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Plack-App-Redirect/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Plack-App-Redirect';

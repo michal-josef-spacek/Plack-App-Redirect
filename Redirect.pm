@@ -5,6 +5,7 @@ use strict;
 use warnings;
 
 use Plack::Response;
+use Plack::Request;
 use Plack::Util::Accessor qw(redirect_url);
 
 our $VERSION = 0.01;
@@ -13,8 +14,9 @@ sub call {
 	my ($self, $env) = @_;
 
 	if (defined $self->redirect_url) {
+		my $req = Plack::Request->new($env);
 		my $res = Plack::Response->new;
-		$res->redirect($self->redirect_url, 308);
+		$res->redirect($self->redirect_url.$req->request_uri, 308);
 		return $res->finalize;
 	} else {
 		return [
@@ -102,6 +104,7 @@ Returns Plack::Component object.
 =head1 DEPENDENCIES
 
 L<Plack::Response>,
+L<Plack::Request>,
 L<Plack::Util::Accessor>.
 
 =head1 REPOSITORY
