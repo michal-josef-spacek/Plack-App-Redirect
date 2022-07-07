@@ -18,10 +18,14 @@ meta-spec:
 name: Plack-App-Redirect
 no_index:
   directory:
+    - examples
     - inc
     - t
     - xt
 requires:
+  Plack::Request: 0
+  Plack::Response: 0
+  Plack::Util::Accessor: 0
   perl: 5.8.0
 resources:
   bugtracker: https://github.com/michal-josef-spacek/Plack-App-Redirect/issues
