@@ -1,6 +1,5 @@
 TODO
 ====
-2. Testy.
 3. volitelny status
 4. volitelny error content
 5. Look to FreeBSD issues in CPANTesters. Probably dependencies
@@ -10,3 +9,6 @@ Applied
 =======
 1. query params to redirect.
 OK [20210616] skim
+
+2. Testy.
+OK [20220707] skim
