@@ -8,7 +8,7 @@ use Plack::Response;
 use Plack::Request;
 use Plack::Util::Accessor qw(redirect_url);
 
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 sub call {
 	my ($self, $env) = @_;
@@ -168,6 +168,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut
